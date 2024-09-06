@@ -11,9 +11,15 @@
 		7641C00A2C8B60F7009EC272 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0092C8B60F7009EC272 /* ContentView.swift */; };
 		7641C00C2C8B60F8009EC272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7641C00B2C8B60F8009EC272 /* Assets.xcassets */; };
 		7641C0102C8B60F8009EC272 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7641C00F2C8B60F8009EC272 /* Preview Assets.xcassets */; };
-		7641C01A2C8B60F8009EC272 /* BnpTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0192C8B60F8009EC272 /* BnpTestTests.swift */; };
 		7641C0242C8B60F8009EC272 /* BnpTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0232C8B60F8009EC272 /* BnpTestUITests.swift */; };
 		7641C0262C8B60F8009EC272 /* BnpTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0252C8B60F8009EC272 /* BnpTestUITestsLaunchTests.swift */; };
+		7641C0332C8B6166009EC272 /* TimeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0322C8B6166009EC272 /* TimeState.swift */; };
+		7641C0352C8B6189009EC272 /* BerlinTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0342C8B6189009EC272 /* BerlinTimeModel.swift */; };
+		7641C0372C8B619B009EC272 /* BerlinTimeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0362C8B619B009EC272 /* BerlinTimeAdapter.swift */; };
+		7641C0392C8B61AC009EC272 /* BerlinTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0382C8B61AC009EC272 /* BerlinTimeConverter.swift */; };
+		7641C03B2C8B6222009EC272 /* BerlinTimeConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C03A2C8B6222009EC272 /* BerlinTimeConverterTests.swift */; };
+		7641C03D2C8B6239009EC272 /* BerlinTimeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C03C2C8B6239009EC272 /* BerlinTimeModelTests.swift */; };
+		7641C03F2C8B6264009EC272 /* BerlinTimeAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C03E2C8B6264009EC272 /* BerlinTimeAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +47,16 @@
 		7641C00D2C8B60F8009EC272 /* BnpTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BnpTest.entitlements; sourceTree = "<group>"; };
 		7641C00F2C8B60F8009EC272 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7641C0152C8B60F8009EC272 /* BnpTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BnpTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7641C0192C8B60F8009EC272 /* BnpTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BnpTestTests.swift; sourceTree = "<group>"; };
 		7641C01F2C8B60F8009EC272 /* BnpTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BnpTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7641C0232C8B60F8009EC272 /* BnpTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BnpTestUITests.swift; sourceTree = "<group>"; };
 		7641C0252C8B60F8009EC272 /* BnpTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BnpTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7641C0322C8B6166009EC272 /* TimeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeState.swift; sourceTree = "<group>"; };
+		7641C0342C8B6189009EC272 /* BerlinTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeModel.swift; sourceTree = "<group>"; };
+		7641C0362C8B619B009EC272 /* BerlinTimeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeAdapter.swift; sourceTree = "<group>"; };
+		7641C0382C8B61AC009EC272 /* BerlinTimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeConverter.swift; sourceTree = "<group>"; };
+		7641C03A2C8B6222009EC272 /* BerlinTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeConverterTests.swift; sourceTree = "<group>"; };
+		7641C03C2C8B6239009EC272 /* BerlinTimeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeModelTests.swift; sourceTree = "<group>"; };
+		7641C03E2C8B6264009EC272 /* BerlinTimeAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinTimeAdapterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,10 @@
 				7641C00B2C8B60F8009EC272 /* Assets.xcassets */,
 				7641C00D2C8B60F8009EC272 /* BnpTest.entitlements */,
 				7641C00E2C8B60F8009EC272 /* Preview Content */,
+				7641C0322C8B6166009EC272 /* TimeState.swift */,
+				7641C0342C8B6189009EC272 /* BerlinTimeModel.swift */,
+				7641C0362C8B619B009EC272 /* BerlinTimeAdapter.swift */,
+				7641C0382C8B61AC009EC272 /* BerlinTimeConverter.swift */,
 			);
 			path = BnpTest;
 			sourceTree = "<group>";
@@ -115,7 +131,9 @@
 		7641C0182C8B60F8009EC272 /* BnpTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				7641C0192C8B60F8009EC272 /* BnpTestTests.swift */,
+				7641C03A2C8B6222009EC272 /* BerlinTimeConverterTests.swift */,
+				7641C03C2C8B6239009EC272 /* BerlinTimeModelTests.swift */,
+				7641C03E2C8B6264009EC272 /* BerlinTimeAdapterTests.swift */,
 			);
 			path = BnpTestTests;
 			sourceTree = "<group>";
@@ -259,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7641C0352C8B6189009EC272 /* BerlinTimeModel.swift in Sources */,
 				7641C00A2C8B60F7009EC272 /* ContentView.swift in Sources */,
 				7641C0082C8B60F7009EC272 /* BnpTestApp.swift in Sources */,
+				7641C0392C8B61AC009EC272 /* BerlinTimeConverter.swift in Sources */,
+				7641C0372C8B619B009EC272 /* BerlinTimeAdapter.swift in Sources */,
+				7641C0332C8B6166009EC272 /* TimeState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7641C01A2C8B60F8009EC272 /* BnpTestTests.swift in Sources */,
+				7641C03F2C8B6264009EC272 /* BerlinTimeAdapterTests.swift in Sources */,
+				7641C03D2C8B6239009EC272 /* BerlinTimeModelTests.swift in Sources */,
+				7641C03B2C8B6222009EC272 /* BerlinTimeConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
