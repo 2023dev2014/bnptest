@@ -14,18 +14,18 @@ struct BerlinTimeModel {
     private(set) var minutes: [TimeState]
 
     var upperHours: [TimeState] {
-        return []
+        return Array(hours[..<BerlinTimeConverter.Constants.numberOfHoursUpperBlocks])
     }
 
     var lowerHours: [TimeState] {
-        return []
+        return Array(hours[BerlinTimeConverter.Constants.numberOfHoursUpperBlocks...])
     }
 
     var upperMinutes: [TimeState] {
-        return []
+        return Array(minutes[..<BerlinTimeConverter.Constants.numberOfMinutesUpperBlocks])
     }
 
     var lowerMinutes: [TimeState] {
-        return []
+        return Array(minutes[BerlinTimeConverter.Constants.numberOfMinutesUpperBlocks...])
     }
 }
