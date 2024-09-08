@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "C5BB0A1B-2511-4540-9194-5A5826362BDB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BnpTest.xcodeproj",
+      "identifier" : "7641C0032C8B60F7009EC272",
+      "name" : "BnpTest"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BnpTest.xcodeproj",
+        "identifier" : "7641C0142C8B60F8009EC272",
+        "name" : "BnpTestTests"
+      }
+    }
+  ],
+  "version" : 1
+}
