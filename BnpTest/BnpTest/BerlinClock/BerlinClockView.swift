@@ -12,9 +12,13 @@ struct BerlinClockView: View {
     @StateObject var viewModel: BerlinClockViewModel = BerlinClockViewModel()
 
     var body: some View {
-        VStack {
-            Text(viewModel.currentDigitTime)
+        VStack(spacing: 16) {
+            SecondsRow(seconds: $viewModel.seconds)
+            HoursRow(upperStates: $viewModel.upperHours, lowerStates: $viewModel.lowerHours)
+            Divider()
+            DigitalTimeView(digitalTime: $viewModel.digitalTime)
         }
+        .padding()
         .onAppear() {
             viewModel.start()
         }

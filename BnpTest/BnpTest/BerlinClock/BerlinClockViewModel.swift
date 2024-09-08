@@ -10,11 +10,22 @@ import Foundation
 
 final class BerlinClockViewModel: ObservableObject {
 
-    @Published var currentDigitTime: String = ""
+    @Published var digitalTime: String = ""
+    @Published var seconds: TimeState = .Y
+    @Published var upperHours: [TimeState] = []
+    @Published var lowerHours: [TimeState] = []
+    @Published var upperMinutes: [TimeState] = []
+    @Published var lowerMinutes: [TimeState] = []
 
     private var currentDate: Date {
         didSet {
-            currentDigitTime = formatDateToString(currentDate)
+            digitalTime = formatDateToString(currentDate)
+            let berlinTime = formatDateToBerlinTime(currentDate)
+            seconds = berlinTime.seconds
+            upperHours = berlinTime.upperHours
+            lowerHours = berlinTime.lowerHours
+            upperMinutes = berlinTime.upperMinutes
+            lowerMinutes = berlinTime.lowerMinutes
         }
     }
     private let berlinTimeAdapter: BerlinTimeAdapter
