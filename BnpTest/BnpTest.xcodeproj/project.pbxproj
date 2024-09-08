@@ -25,6 +25,7 @@
 		7641C04D2C8DDA0A009EC272 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C04C2C8DDA0A009EC272 /* DateManager.swift */; };
 		7641C0522C8DDA7A009EC272 /* BerlinClockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0512C8DDA7A009EC272 /* BerlinClockViewModelTests.swift */; };
 		7641C0552C8DDA90009EC272 /* DateManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0542C8DDA90009EC272 /* DateManagerMock.swift */; };
+		7641C0582C8DDD8D009EC272 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0572C8DDD8D009EC272 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7641C04C2C8DDA0A009EC272 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		7641C0512C8DDA7A009EC272 /* BerlinClockViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockViewModelTests.swift; sourceTree = "<group>"; };
 		7641C0542C8DDA90009EC272 /* DateManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManagerMock.swift; sourceTree = "<group>"; };
+		7641C0572C8DDD8D009EC272 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		7641C0182C8B60F8009EC272 /* BnpTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				7641C0562C8DDD7F009EC272 /* Helpers */,
 				7641C0532C8DDA81009EC272 /* Mocks */,
 				7641C0502C8DDA6B009EC272 /* BerlinClock */,
 				7641C04E2C8DDA53009EC272 /* TimeConverter */,
@@ -224,6 +227,14 @@
 				7641C0542C8DDA90009EC272 /* DateManagerMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7641C0562C8DDD7F009EC272 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7641C0572C8DDD8D009EC272 /* DateHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				7641C03F2C8B6264009EC272 /* BerlinTimeAdapterTests.swift in Sources */,
 				7641C0522C8DDA7A009EC272 /* BerlinClockViewModelTests.swift in Sources */,
 				7641C03D2C8B6239009EC272 /* BerlinTimeModelTests.swift in Sources */,
+				7641C0582C8DDD8D009EC272 /* DateHelper.swift in Sources */,
 				7641C0552C8DDA90009EC272 /* DateManagerMock.swift in Sources */,
 				7641C03B2C8B6222009EC272 /* BerlinTimeConverterTests.swift in Sources */,
 			);
@@ -540,8 +552,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -578,8 +589,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

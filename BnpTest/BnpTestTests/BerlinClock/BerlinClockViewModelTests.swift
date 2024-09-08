@@ -26,9 +26,7 @@ final class BerlinClockViewModelTests: XCTestCase {
 
     func testStart() {
         sut.start()
-        let timestampInSeconds = 1725801674 // 08 september 2024 13:21:14
-        let date = Date(timeIntervalSince1970: TimeInterval(timestampInSeconds))
-        dateManager.simulateNewDate(date)
+        dateManager.simulateNewDate(DateHelper().heightSeptemberTwentyTwentyFour)
 
         XCTAssertEqual(sut.currentDigitTime, "09-08-2024 15:21:14")
         XCTAssertTrue(dateManager.hasCalledStart)
