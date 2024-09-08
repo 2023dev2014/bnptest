@@ -18,7 +18,6 @@ final class BerlinTimeAdapterTests: XCTestCase {
 
     func testConvertToBerlinDate() {
         let timestampInSeconds = 1725636129 // 06 september 2024 17:22:09
-
         let date = Date(timeIntervalSince1970: TimeInterval(timestampInSeconds))
         let model = sut.convertToBerlin(date: date)
 
