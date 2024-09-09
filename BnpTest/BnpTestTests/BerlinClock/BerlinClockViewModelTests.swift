@@ -27,12 +27,17 @@ final class BerlinClockViewModelTests: XCTestCase {
         XCTAssertEqual(sut.lowerHours, [])
         XCTAssertEqual(sut.upperMinutes, [])
         XCTAssertEqual(sut.lowerMinutes, [])
+        XCTAssertFalse(sut.isStarted)
     }
 
     func testStart() {
         sut.start()
+
+        XCTAssertFalse(sut.isStarted)
+
         dateManager.simulateNewDate(DateHelper().heightSeptemberTwentyTwentyFour)
 
+        XCTAssertTrue(sut.isStarted)
         XCTAssertEqual(sut.digitalTime, "09-08-2024 15:21:14")
         XCTAssertTrue(dateManager.hasCalledStart)
         XCTAssertFalse(dateManager.hasCalledStop)

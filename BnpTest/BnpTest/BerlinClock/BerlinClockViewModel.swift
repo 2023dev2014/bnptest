@@ -16,6 +16,7 @@ final class BerlinClockViewModel: ObservableObject {
     @Published var lowerHours: [TimeState] = []
     @Published var upperMinutes: [TimeState] = []
     @Published var lowerMinutes: [TimeState] = []
+    @Published var isStarted: Bool = false
 
     private var currentDate: Date {
         didSet {
@@ -26,6 +27,9 @@ final class BerlinClockViewModel: ObservableObject {
             lowerHours = berlinTime.lowerHours
             upperMinutes = berlinTime.upperMinutes
             lowerMinutes = berlinTime.lowerMinutes
+            if !isStarted {
+                isStarted = true
+            }
         }
     }
     private let berlinTimeAdapter: BerlinTimeAdapter
@@ -45,6 +49,7 @@ final class BerlinClockViewModel: ObservableObject {
 
     func stop() {
         dateManager.stop()
+        isStarted = false
     }
 }
 
