@@ -27,6 +27,9 @@
 		7641C05C2C8DDF73009EC272 /* DigitalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C05B2C8DDF73009EC272 /* DigitalTimeView.swift */; };
 		7641C05E2C8DE17E009EC272 /* SecondsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C05D2C8DE17E009EC272 /* SecondsRow.swift */; };
 		7641C0602C8DE5D9009EC272 /* HoursRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C05F2C8DE5D9009EC272 /* HoursRow.swift */; };
+		7641C0662C8E0919009EC272 /* LampsViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0652C8E0919009EC272 /* LampsViewable.swift */; };
+		7641C0682C8E0CC5009EC272 /* MinutesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C0672C8E0CC5009EC272 /* MinutesRow.swift */; };
+		7641C06B2C8F2AAC009EC272 /* RoundedRectangleShadowedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641C06A2C8F2AAC009EC272 /* RoundedRectangleShadowedBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		7641C05B2C8DDF73009EC272 /* DigitalTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalTimeView.swift; sourceTree = "<group>"; };
 		7641C05D2C8DE17E009EC272 /* SecondsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsRow.swift; sourceTree = "<group>"; };
 		7641C05F2C8DE5D9009EC272 /* HoursRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursRow.swift; sourceTree = "<group>"; };
+		7641C0652C8E0919009EC272 /* LampsViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampsViewable.swift; sourceTree = "<group>"; };
+		7641C0672C8E0CC5009EC272 /* MinutesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesRow.swift; sourceTree = "<group>"; };
+		7641C06A2C8F2AAC009EC272 /* RoundedRectangleShadowedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleShadowedBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +112,15 @@
 		7641C0062C8B60F7009EC272 /* BnpTest */ = {
 			isa = PBXGroup;
 			children = (
-				7641C0472C8DD80F009EC272 /* TimeManager */,
-				7641C0422C8CB3AF009EC272 /* BerlinClock */,
-				7641C0072C8B60F7009EC272 /* BnpTestApp.swift */,
 				7641C00B2C8B60F8009EC272 /* Assets.xcassets */,
+				7641C0422C8CB3AF009EC272 /* BerlinClock */,
 				7641C00D2C8B60F8009EC272 /* BnpTest.entitlements */,
-				7641C00E2C8B60F8009EC272 /* Preview Content */,
+				7641C0072C8B60F7009EC272 /* BnpTestApp.swift */,
 				7641C0402C8CB375009EC272 /* Models */,
+				7641C00E2C8B60F8009EC272 /* Preview Content */,
 				7641C0412C8CB37C009EC272 /* TimeConverter */,
+				7641C0472C8DD80F009EC272 /* TimeManager */,
+				7641C0692C8F2A90009EC272 /* ViewModifiers */,
 			);
 			path = BnpTest;
 			sourceTree = "<group>";
@@ -219,11 +226,21 @@
 		7641C05A2C8DDF64009EC272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7641C05B2C8DDF73009EC272 /* DigitalTimeView.swift */,
 				7641C05D2C8DE17E009EC272 /* SecondsRow.swift */,
 				7641C05F2C8DE5D9009EC272 /* HoursRow.swift */,
+				7641C0672C8E0CC5009EC272 /* MinutesRow.swift */,
+				7641C0652C8E0919009EC272 /* LampsViewable.swift */,
+				7641C05B2C8DDF73009EC272 /* DigitalTimeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7641C0692C8F2A90009EC272 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				7641C06A2C8F2AAC009EC272 /* RoundedRectangleShadowedBackground.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +345,7 @@
 			files = (
 				7641C0352C8B6189009EC272 /* BerlinTimeModel.swift in Sources */,
 				7641C0442C8CB3BD009EC272 /* BerlinClockViewModel.swift in Sources */,
+				7641C0682C8E0CC5009EC272 /* MinutesRow.swift in Sources */,
 				7641C0462C8CB482009EC272 /* BerlinClockView.swift in Sources */,
 				7641C0082C8B60F7009EC272 /* BnpTestApp.swift in Sources */,
 				7641C0392C8B61AC009EC272 /* BerlinTimeConverter.swift in Sources */,
@@ -336,7 +354,9 @@
 				7641C05C2C8DDF73009EC272 /* DigitalTimeView.swift in Sources */,
 				7641C0372C8B619B009EC272 /* BerlinTimeAdapter.swift in Sources */,
 				7641C04D2C8DDA0A009EC272 /* DateManager.swift in Sources */,
+				7641C0662C8E0919009EC272 /* LampsViewable.swift in Sources */,
 				7641C0332C8B6166009EC272 /* TimeState.swift in Sources */,
+				7641C06B2C8F2AAC009EC272 /* RoundedRectangleShadowedBackground.swift in Sources */,
 				7641C05E2C8DE17E009EC272 /* SecondsRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

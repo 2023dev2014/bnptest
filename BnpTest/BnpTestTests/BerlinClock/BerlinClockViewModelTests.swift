@@ -22,6 +22,11 @@ final class BerlinClockViewModelTests: XCTestCase {
         XCTAssertEqual(sut.digitalTime, "")
         XCTAssertFalse(dateManager.hasCalledStart)
         XCTAssertFalse(dateManager.hasCalledStop)
+        XCTAssertEqual(sut.seconds, .unset)
+        XCTAssertEqual(sut.upperHours, [])
+        XCTAssertEqual(sut.lowerHours, [])
+        XCTAssertEqual(sut.upperMinutes, [])
+        XCTAssertEqual(sut.lowerMinutes, [])
     }
 
     func testStart() {
@@ -31,6 +36,11 @@ final class BerlinClockViewModelTests: XCTestCase {
         XCTAssertEqual(sut.digitalTime, "09-08-2024 15:21:14")
         XCTAssertTrue(dateManager.hasCalledStart)
         XCTAssertFalse(dateManager.hasCalledStop)
+        XCTAssertEqual(sut.seconds, .Y)
+        XCTAssertEqual(sut.upperHours, [.R, .R, .R, .O])
+        XCTAssertEqual(sut.lowerHours, [.O, .O, .O, .O])
+        XCTAssertEqual(sut.upperMinutes, [.Y, .Y, .R, .Y, .O, .O, .O, .O, .O, .O, .O])
+        XCTAssertEqual(sut.lowerMinutes, [.Y, .O, .O, .O])
     }
 
     func testStop() {

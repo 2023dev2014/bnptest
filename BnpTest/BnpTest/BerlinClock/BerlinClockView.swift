@@ -13,8 +13,7 @@ struct BerlinClockView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            SecondsRow(seconds: $viewModel.seconds)
-            HoursRow(upperStates: $viewModel.upperHours, lowerStates: $viewModel.lowerHours)
+            clockView()
             Divider()
             DigitalTimeView(digitalTime: $viewModel.digitalTime)
         }
@@ -25,5 +24,19 @@ struct BerlinClockView: View {
         .onDisappear() {
             viewModel.stop()
         }
+    }
+}
+
+private extension BerlinClockView {
+
+    func clockView() -> some View {
+        VStack {
+            SecondsRow(seconds: $viewModel.seconds)
+            HoursRow(upperRowStates: $viewModel.upperHours, lowerRowStates: $viewModel.lowerHours)
+            MinutesRow(upperRowStates: $viewModel.upperMinutes, lowerRowStates: $viewModel.lowerMinutes)
+        }
+        .padding()
+        .cardBackground()
+        .frame(maxWidth: 320)
     }
 }
