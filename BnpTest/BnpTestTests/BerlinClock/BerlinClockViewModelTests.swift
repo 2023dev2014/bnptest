@@ -22,7 +22,7 @@ final class BerlinClockViewModelTests: XCTestCase {
         XCTAssertEqual(sut.digitalTime, "")
         XCTAssertFalse(dateManager.hasCalledStart)
         XCTAssertFalse(dateManager.hasCalledStop)
-        XCTAssertEqual(sut.seconds, .unset)
+        XCTAssertEqual(sut.seconds, .O)
         XCTAssertEqual(sut.upperHours, [])
         XCTAssertEqual(sut.lowerHours, [])
         XCTAssertEqual(sut.upperMinutes, [])

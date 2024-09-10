@@ -11,7 +11,7 @@ import Foundation
 final class BerlinClockViewModel: ObservableObject {
 
     @Published var digitalTime: String = ""
-    @Published var seconds: TimeState = .unset
+    @Published var seconds: TimeState = .O
     @Published var upperHours: [TimeState] = []
     @Published var lowerHours: [TimeState] = []
     @Published var upperMinutes: [TimeState] = []

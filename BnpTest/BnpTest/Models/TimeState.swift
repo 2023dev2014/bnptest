@@ -15,14 +15,12 @@ enum TimeState: Identifiable {
     case Y
     case R
     case O
-    case unset
 
     var color: Color {
         switch self {
         case .Y: return .yellow
         case .R: return .red
         case .O: return .gray.opacity(0.5)
-        case .unset: return .clear
         }
     }
 }

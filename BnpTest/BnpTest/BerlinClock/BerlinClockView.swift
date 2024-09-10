@@ -12,7 +12,7 @@ struct BerlinClockView: View {
     @StateObject var viewModel: BerlinClockViewModel = BerlinClockViewModel()
 
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: Constants.rowsSpacing) {
             DigitalTimeView(digitalTime: $viewModel.digitalTime)
             clockView()
         }
@@ -38,7 +38,12 @@ private extension BerlinClockView {
             }
             .padding()
             .cardBackground()
-            .frame(maxWidth: 320)
+            .frame(maxWidth: Constants.maxClockWidth)
         }
+    }
+
+    enum Constants {
+        static let maxClockWidth: CGFloat = 320
+        static let rowsSpacing: CGFloat = 16
     }
 }

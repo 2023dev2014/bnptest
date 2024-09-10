@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 protocol LampsViewable {
-    associatedtype V: View
-    
+    associatedtype Lamps: View
+
     var upperRowStates: [TimeState] { get }
     var lowerRowStates: [TimeState] { get }
 
-    func lampsView() -> V
+    func lampsView() -> Lamps
 }
 
 extension LampsViewable {
@@ -32,10 +32,15 @@ private extension LampsViewable {
     func row(with states: [TimeState]) -> some View {
         HStack {
             ForEach(states) { state in
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: LampConstants.cornerRadius)
                     .fill(state.color)
-                    .frame(maxHeight: 36)
+                    .frame(maxHeight: LampConstants.maxHeight)
             }
         }
     }
+}
+
+enum LampConstants {
+    static let cornerRadius: CGFloat = 16
+    static let maxHeight: CGFloat = 36
 }

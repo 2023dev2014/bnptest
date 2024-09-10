@@ -14,6 +14,5 @@ struct HoursRow: View, LampsViewable {
 
     var body: some View {
         lampsView()
-        
     }
 }

@@ -16,7 +16,7 @@ final class BerlinTimeAdapterTests: XCTestCase {
         sut = BerlinTimeAdapter()
     }
 
-    func testConvertToBerlinDate() {
+    func testConvertToBerlinTime() {
         let model = sut.convertToBerlin(date: DateHelper().sixSeptemberTwentyTwentyFour)
 
         XCTAssertEqual(model.upperHours, [.R, .R, .R, .O])

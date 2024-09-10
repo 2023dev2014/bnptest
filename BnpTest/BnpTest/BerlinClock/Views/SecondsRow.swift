@@ -14,6 +14,13 @@ struct SecondsRow: View {
     var body: some View {
         Circle()
             .fill(seconds.color)
-            .frame(width: 48, height: 48)
+            .frame(width: Constants.lampSize, height: Constants.lampSize)
+    }
+}
+
+private extension SecondsRow {
+
+    enum Constants {
+        static let lampSize: CGFloat = 48
     }
 }
